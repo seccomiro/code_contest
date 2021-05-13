@@ -21,6 +21,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'rails-erd'
   gem 'rspec-rails', '~> 5.0.0'
   gem 'solargraph'
 end

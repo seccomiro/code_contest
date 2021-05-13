@@ -1,0 +1,45 @@
+<% content_for :title do %>
+  Judges
+<% end %>
+
+<div class="page-header">
+  <h1>Judges</h1>
+  <%= link_to new_judge_path, class: 'btn btn-primary' do %>
+    <%= icon 'fas', 'plus' %>
+    New Judge
+  <% end %>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>User</th>
+        <th>Contest</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @judges.each do |judge| %>
+        <tr>
+          <td><%= judge.name %></td>
+          <td><%= judge.user %></td>
+          <td><%= judge.contest %></td>
+          <td>
+            <%= link_to judge, class: 'btn btn-info btn-sm' do %>
+              <%= icon 'fas', 'eye', class: 'fa-fw' %>
+            <% end %>
+            <%= link_to edit_judge_path(judge), class: 'btn btn-success btn-sm' do %>
+              <%= icon 'fas', 'edit', class: 'fa-fw' %>
+            <% end %>
+            <%= link_to judge, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'btn btn-danger btn-sm' do %>
+              <%= icon 'fas', 'times', class: 'fa-fw' %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

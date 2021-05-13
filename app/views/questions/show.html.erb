@@ -1,0 +1,32 @@
+<% content_for :title do %>
+  Details of Question
+<% end %>
+
+<div class="page-header">
+  <h1>Details of Question</h1>
+  <div>
+    <%= link_to edit_question_path(@question), class: 'btn btn-success' do %>
+      <%= icon 'fas', 'edit' %>
+      Edit
+    <% end %>
+    <%= link_to questions_path, class: 'btn btn-outline-secondary' do %>
+      <%= icon 'fas', 'bars' %>
+      Back
+    <% end %>
+  </div>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Contest:</dt>
+  <dd><%= @question.contest %></dd>
+
+  <dt>Number:</dt>
+  <dd><%= @question.number %></dd>
+
+  <dt>Description:</dt>
+  <dd><%= @question.description %></dd>
+
+  <dt>Language:</dt>
+  <dd><%= @question.language %></dd>
+
+</dl>

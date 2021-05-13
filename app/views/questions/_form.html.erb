@@ -1,0 +1,16 @@
+
+<%= simple_form_for @question do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.association :contest %>
+    <%= f.input :number %>
+    <%= f.input :description %>
+    <%= f.input :language %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, f.object.new_record? ? 'Criar Question' : 'Atualizar Question', class: 'btn btn-primary btn-lg' %>
+  </div>
+<% end %>

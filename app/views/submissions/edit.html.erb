@@ -1,0 +1,19 @@
+<% content_for :title do %>
+  Editing Submission
+<% end %>
+
+<div class="page-header">
+  <h1>Editing Submission</h1>
+  <div>
+    <%= link_to @submission, class: 'btn btn-info' do %>
+      <%= icon 'fas', 'eye' %>
+      Ver
+    <% end %>
+    <%= link_to submissions_path, class: 'btn btn-outline-secondary' do %>
+      <%= icon 'fas', 'bars' %>
+      Back
+    <% end %>
+  </div>
+</div>
+
+<%= render 'form' %>

@@ -1,0 +1,32 @@
+<% content_for :title do %>
+  Details of Submission
+<% end %>
+
+<div class="page-header">
+  <h1>Details of Submission</h1>
+  <div>
+    <%= link_to edit_submission_path(@submission), class: 'btn btn-success' do %>
+      <%= icon 'fas', 'edit' %>
+      Edit
+    <% end %>
+    <%= link_to submissions_path, class: 'btn btn-outline-secondary' do %>
+      <%= icon 'fas', 'bars' %>
+      Back
+    <% end %>
+  </div>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Question:</dt>
+  <dd><%= @submission.question %></dd>
+
+  <dt>Team:</dt>
+  <dd><%= @submission.team %></dd>
+
+  <dt>Code:</dt>
+  <dd><%= @submission.code %></dd>
+
+  <dt>Language:</dt>
+  <dd><%= @submission.language %></dd>
+
+</dl>

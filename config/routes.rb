@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :evaluations
   resources :submissions
   resources :questions
   resources :judges

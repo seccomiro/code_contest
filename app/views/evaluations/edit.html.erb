@@ -1,0 +1,19 @@
+<% content_for :title do %>
+  Editing Evaluation
+<% end %>
+
+<div class="page-header">
+  <h1>Editing Evaluation</h1>
+  <div>
+    <%= link_to @evaluation, class: 'btn btn-info' do %>
+      <%= icon 'fas', 'eye' %>
+      Ver
+    <% end %>
+    <%= link_to evaluations_path, class: 'btn btn-outline-secondary' do %>
+      <%= icon 'fas', 'bars' %>
+      Back
+    <% end %>
+  </div>
+</div>
+
+<%= render 'form' %>

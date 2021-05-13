@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :contests
   has_many :teams
+  has_many :judges
 end

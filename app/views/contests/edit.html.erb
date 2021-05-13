@@ -1,0 +1,19 @@
+<% content_for :title do %>
+  Editing Contest
+<% end %>
+
+<div class="page-header">
+  <h1>Editing Contest</h1>
+  <div>
+    <%= link_to @contest, class: 'btn btn-info' do %>
+      <%= icon 'fas', 'eye' %>
+      Ver
+    <% end %>
+    <%= link_to contests_path, class: 'btn btn-outline-secondary' do %>
+      <%= icon 'fas', 'bars' %>
+      Back
+    <% end %>
+  </div>
+</div>
+
+<%= render 'form' %>

@@ -1,0 +1,35 @@
+<% content_for :title do %>
+  Details of Contest
+<% end %>
+
+<div class="page-header">
+  <h1>Details of Contest</h1>
+  <div>
+    <%= link_to edit_contest_path(@contest), class: 'btn btn-success' do %>
+      <%= icon 'fas', 'edit' %>
+      Edit
+    <% end %>
+    <%= link_to contests_path, class: 'btn btn-outline-secondary' do %>
+      <%= icon 'fas', 'bars' %>
+      Back
+    <% end %>
+  </div>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @contest.name %></dd>
+
+  <dt>Organizer:</dt>
+  <dd><%= @contest.organizer %></dd>
+
+  <dt>Starts at:</dt>
+  <dd><%= @contest.starts_at %></dd>
+
+  <dt>Finishes at:</dt>
+  <dd><%= @contest.finishes_at %></dd>
+
+  <dt>User:</dt>
+  <dd><%= @contest.user %></dd>
+
+</dl>

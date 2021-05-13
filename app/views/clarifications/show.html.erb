@@ -1,0 +1,35 @@
+<% content_for :title do %>
+  Details of Clarification
+<% end %>
+
+<div class="page-header">
+  <h1>Details of Clarification</h1>
+  <div>
+    <%= link_to edit_clarification_path(@clarification), class: 'btn btn-success' do %>
+      <%= icon 'fas', 'edit' %>
+      Edit
+    <% end %>
+    <%= link_to clarifications_path, class: 'btn btn-outline-secondary' do %>
+      <%= icon 'fas', 'bars' %>
+      Back
+    <% end %>
+  </div>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Team:</dt>
+  <dd><%= @clarification.team %></dd>
+
+  <dt>Question:</dt>
+  <dd><%= @clarification.question %></dd>
+
+  <dt>Judge:</dt>
+  <dd><%= @clarification.judge %></dd>
+
+  <dt>Question:</dt>
+  <dd><%= @clarification.question %></dd>
+
+  <dt>Answer:</dt>
+  <dd><%= @clarification.answer %></dd>
+
+</dl>

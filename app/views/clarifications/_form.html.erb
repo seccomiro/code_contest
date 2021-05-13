@@ -1,0 +1,17 @@
+
+<%= simple_form_for @clarification do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.association :team %>
+    <%= f.association :question %>
+    <%= f.association :judge %>
+    <%= f.input :question %>
+    <%= f.input :answer %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, f.object.new_record? ? 'Criar Clarification' : 'Atualizar Clarification', class: 'btn btn-primary btn-lg' %>
+  </div>
+<% end %>

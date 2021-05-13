@@ -1,0 +1,49 @@
+<% content_for :title do %>
+  Clarifications
+<% end %>
+
+<div class="page-header">
+  <h1>Clarifications</h1>
+  <%= link_to new_clarification_path, class: 'btn btn-primary' do %>
+    <%= icon 'fas', 'plus' %>
+    New Clarification
+  <% end %>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Team</th>
+        <th>Question</th>
+        <th>Judge</th>
+        <th>Question</th>
+        <th>Answer</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @clarifications.each do |clarification| %>
+        <tr>
+          <td><%= clarification.team %></td>
+          <td><%= clarification.question %></td>
+          <td><%= clarification.judge %></td>
+          <td><%= clarification.question %></td>
+          <td><%= clarification.answer %></td>
+          <td>
+            <%= link_to clarification, class: 'btn btn-info btn-sm' do %>
+              <%= icon 'fas', 'eye', class: 'fa-fw' %>
+            <% end %>
+            <%= link_to edit_clarification_path(clarification), class: 'btn btn-success btn-sm' do %>
+              <%= icon 'fas', 'edit', class: 'fa-fw' %>
+            <% end %>
+            <%= link_to clarification, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'btn btn-danger btn-sm' do %>
+              <%= icon 'fas', 'times', class: 'fa-fw' %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -25,7 +25,7 @@
     <tbody>
       <% @questions.each do |question| %>
         <tr>
-          <td><%= question.contest %></td>
+          <td><%= question.contest.name %></td>
           <td><%= question.number %></td>
           <td><%= question.description %></td>
           <td><%= question.language %></td>

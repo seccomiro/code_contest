@@ -18,7 +18,6 @@
         <th>Organizer</th>
         <th>Starts at</th>
         <th>Finishes at</th>
-        <th>User</th>
         <th></th>
       </tr>
     </thead>
@@ -30,7 +29,6 @@
           <td><%= contest.organizer %></td>
           <td><%= contest.starts_at %></td>
           <td><%= contest.finishes_at %></td>
-          <td><%= contest.user %></td>
           <td>
             <%= link_to contest, class: 'btn btn-info btn-sm' do %>
               <%= icon 'fas', 'eye', class: 'fa-fw' %>

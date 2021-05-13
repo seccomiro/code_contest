@@ -22,6 +22,8 @@ class ContestsController < ApplicationController
   # POST /contests
   def create
     @contest = Contest.new(contest_params)
+    @contest.user = current_user
+    @contest.save
 
     if @contest.save
       redirect_to @contest, notice: 'Contest was successfully created.'
